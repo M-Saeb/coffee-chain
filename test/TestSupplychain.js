@@ -66,8 +66,8 @@ contract('SupplyChain', function(accounts) {
         // Verify the result set
         // console.log(resultBufferOne[0].toNumber())
         // console.log("this is a test: ", resultBufferOne[0].toNumber())
-        assert.equal(resultBufferOne[0].toNumber(), 1, 'Error: Invalid item SKU')
-        assert.equal(resultBufferOne[1].toNumber(), 1, 'Error: Invalid item UPC')
+        assert.equal(resultBufferOne[0].s, 1, 'Error: Invalid item SKU')
+        assert.equal(resultBufferOne[1].s, 1, 'Error: Invalid item UPC')
         assert.equal(resultBufferOne[2], emptyAddress, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferOne[3], originFarmerID, 'Error: Missing or Invalid originFarmerID')
         assert.equal(resultBufferOne[4], originFarmName, 'Error: Missing or Invalid originFarmName')
