@@ -184,7 +184,7 @@ contract SupplyChain {
     items[_upc].itemState = State.Processed;
 
     // Emit the appropriate event
-    emit Harvested(_upc);
+    emit Processed(_upc);
   }
 
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
@@ -217,7 +217,7 @@ contract SupplyChain {
     items[_upc].productPrice = _price;
 
     // Emit the appropriate event
-    emit Sold(_upc);
+    emit ForSale(upc);
   }
 
   // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'

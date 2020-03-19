@@ -1,3 +1,6 @@
+// import Web3 from "web3";
+//const Web3 = require('web3');
+
 App = {
     web3Provider: null,
     contracts: {},
@@ -59,6 +62,7 @@ App = {
         /// Find or Inject Web3 Provider
         /// Modern dapp browsers...
         if (window.ethereum) {
+            // console.log("this Ethererum for the page is:..", window.ethereum)
             App.web3Provider = window.ethereum;
             try {
                 // Request account access
