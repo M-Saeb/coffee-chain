@@ -66,8 +66,8 @@ contract('SupplyChain', function(accounts) {
         // Verify the result set
         // console.log(resultBufferOne[0].toNumber())
         // console.log("this is a test: ", resultBufferOne[0].toNumber())
-        assert.equal(resultBufferOne[0].s, 1, 'Error: Invalid item SKU')
-        assert.equal(resultBufferOne[1].s, 1, 'Error: Invalid item UPC')
+        assert.equal(resultBufferOne[0].toNumber(), 1, 'Error: Invalid item SKU')
+        assert.equal(resultBufferOne[1].toNumber(), 1, 'Error: Invalid item UPC')
         assert.equal(resultBufferOne[2], emptyAddress, 'Error: Missing or Invalid ownerID')
         assert.equal(resultBufferOne[3], originFarmerID, 'Error: Missing or Invalid originFarmerID')
         assert.equal(resultBufferOne[4], originFarmName, 'Error: Missing or Invalid originFarmName')
@@ -265,8 +265,8 @@ contract('SupplyChain', function(accounts) {
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc, {from: ownerID})        
 
         // Verify the result set
-        assert.equal(resultBufferOne[0].s, sku, 'Error: Invalid sku value')
-        assert.equal(resultBufferOne[1].s, upc, 'Error: Invalid upc value')
+        assert.equal(resultBufferOne[0].toNumber(), sku, 'Error: Invalid sku value')
+        assert.equal(resultBufferOne[1].toNumber(), upc, 'Error: Invalid upc value')
         assert.equal(resultBufferOne[2], ownerID, 'Error: Invalid Owner ID')
         assert.equal(resultBufferOne[3], originFarmerID, 'Error: Invalid product notes')
         assert.equal(resultBufferOne[4], originFarmName, 'Error: Invalid product price')
@@ -283,8 +283,8 @@ contract('SupplyChain', function(accounts) {
         const resultBufferTwo = await supplyChain.fetchItemBufferTwo.call(upc, {from: ownerID})        
 
         // Verify the result set
-        assert.equal(resultBufferTwo[0].s, sku, 'Error: Invalid sku value')
-        assert.equal(resultBufferTwo[1].s, upc, 'Error: Invalid upc value')
+        assert.equal(resultBufferTwo[0].toNumber(), sku, 'Error: Invalid sku value')
+        assert.equal(resultBufferTwo[1].toNumber(), upc, 'Error: Invalid upc value')
         assert.equal(resultBufferTwo[2], productID, 'Error: Invalid product ID')
         assert.equal(resultBufferTwo[3], productNotes, 'Error: Invalid product notes')
         assert.equal(resultBufferTwo[4], productPrice, 'Error: Invalid product price')

@@ -156,6 +156,8 @@ contract SupplyChain {
   function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public
   {
     // Add the new item as part of Harvest
+    items[_upc].upc = _upc;
+    items[_upc].sku = sku;
     items[_upc].itemState = State.Harvested;
     items[_upc].originFarmerID = _originFarmerID;
     items[_upc].originFarmName = _originFarmName;
@@ -164,6 +166,25 @@ contract SupplyChain {
     items[_upc].originFarmLongitude = _originFarmLongitude;
     items[_upc].productNotes = _productNotes;
     items[_upc].productID = sku + _upc;
+
+    // Item memory newItem = Item({
+    //   upc: _upc,
+    //   sku: sku,
+    //   ownerID: _originFarmerID,
+    //   originFarmName: _originFarmName,
+    //   originFarmInformation: _originFarmInformation,
+    //   originFarmLatitude: _originFarmLatitude,
+    //   originFarmLongitude: _originFarmLongitude,
+    //   productID: sku + _upc,
+    //   productNotes: _productNotes,
+    //   productPrice: 0,
+    //   itemState: State.Harvested,
+    //   distributorID: address(0),
+    //   retailerID: address(0),
+    //   consumerID: address(0)
+    // });
+
+    // items[_upc] = newItem;
 
     // Increment sku
     sku = sku + 1;
