@@ -166,26 +166,7 @@ contract SupplyChain {
     items[_upc].originFarmLongitude = _originFarmLongitude;
     items[_upc].productNotes = _productNotes;
     items[_upc].productID = sku + _upc;
-
-    // Item memory newItem = Item({
-    //   upc: _upc,
-    //   sku: sku,
-    //   ownerID: _originFarmerID,
-    //   originFarmName: _originFarmName,
-    //   originFarmInformation: _originFarmInformation,
-    //   originFarmLatitude: _originFarmLatitude,
-    //   originFarmLongitude: _originFarmLongitude,
-    //   productID: sku + _upc,
-    //   productNotes: _productNotes,
-    //   productPrice: 0,
-    //   itemState: State.Harvested,
-    //   distributorID: address(0),
-    //   retailerID: address(0),
-    //   consumerID: address(0)
-    // });
-
-    // items[_upc] = newItem;
-
+    
     // Increment sku
     sku = sku + 1;
 
