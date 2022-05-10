@@ -1,5 +1,5 @@
 # Coffee Chain
-A Dapp for tracking coffee's supply Chain life cycle, from harvesting the the beens by the formed. To purchasing them by the consumer.
+A Dapp for tracking coffee's supply chain life cycle, from harvesting the beans by the farmer. To purchasing them by the consumer.
 
 
 ## Description
